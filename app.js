@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-mongoose.connect("mongodb+srv://thor:lAYOPTLYhQGKahWo@todocluster.ljatd.mongodb.net/todoCluster?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://thor:m%40%24%233%23%2435O432%23%24%23%40%25%235h%26%5E%25i56t@todocluster.ljatd.mongodb.net/todoCluster?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
