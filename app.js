@@ -67,11 +67,6 @@ app.post("/add", (req, res) => {
             console.log(err);
         } else {
             console.log(newlyCreated);
-            todoSchema.index({
-                createdAt: 1
-            }, {
-                expireAfterSeconds: req.body.todo.duration
-            });
             res.redirect("/list");
         }
     });
