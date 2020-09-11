@@ -34,7 +34,8 @@ var todoSchema = new mongoose.Schema({
     duration: Number,
     createdAt: {
         type: Date,
-        default: Date.now
+        default: Date.now,
+        expires: Number
     }
 });
 
@@ -67,6 +68,11 @@ app.post("/add", (req, res) => {
             console.log(err);
         } else {
             console.log(newlyCreated);
+            todoSchema.index({
+                createdAt: 1
+            }, {
+                expires: req.body.todo.duration
+            });
             res.redirect("/list");
         }
     });
